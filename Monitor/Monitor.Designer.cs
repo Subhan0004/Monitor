@@ -38,14 +38,17 @@ namespace Monitor
             this.label_output = new System.Windows.Forms.Label();
             this.text_output = new System.Windows.Forms.TextBox();
             this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_exit = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_click
             // 
             this.button_click.BackColor = System.Drawing.Color.SpringGreen;
+            this.button_click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_click.FlatAppearance.BorderSize = 0;
             this.button_click.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_click.Location = new System.Drawing.Point(559, 61);
+            this.button_click.Location = new System.Drawing.Point(526, 61);
             this.button_click.Margin = new System.Windows.Forms.Padding(4);
             this.button_click.Name = "button_click";
             this.button_click.Size = new System.Drawing.Size(160, 44);
@@ -57,9 +60,10 @@ namespace Monitor
             // button_enable
             // 
             this.button_enable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button_enable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_enable.FlatAppearance.BorderSize = 0;
             this.button_enable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_enable.Location = new System.Drawing.Point(559, 169);
+            this.button_enable.Location = new System.Drawing.Point(526, 169);
             this.button_enable.Margin = new System.Windows.Forms.Padding(4);
             this.button_enable.Name = "button_enable";
             this.button_enable.Size = new System.Drawing.Size(160, 44);
@@ -71,9 +75,10 @@ namespace Monitor
             // button_disable
             // 
             this.button_disable.BackColor = System.Drawing.Color.Tomato;
+            this.button_disable.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_disable.FlatAppearance.BorderSize = 0;
             this.button_disable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_disable.Location = new System.Drawing.Point(559, 221);
+            this.button_disable.Location = new System.Drawing.Point(526, 222);
             this.button_disable.Margin = new System.Windows.Forms.Padding(4);
             this.button_disable.Name = "button_disable";
             this.button_disable.Size = new System.Drawing.Size(160, 44);
@@ -89,7 +94,7 @@ namespace Monitor
             this.tb_line.Margin = new System.Windows.Forms.Padding(4);
             this.tb_line.Multiline = true;
             this.tb_line.Name = "tb_line";
-            this.tb_line.Size = new System.Drawing.Size(362, 67);
+            this.tb_line.Size = new System.Drawing.Size(323, 67);
             this.tb_line.TabIndex = 4;
             this.tb_line.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -97,7 +102,7 @@ namespace Monitor
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 59);
+            this.label1.Location = new System.Drawing.Point(12, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 27);
             this.label1.TabIndex = 5;
@@ -107,7 +112,7 @@ namespace Monitor
             // 
             this.label_output.AutoSize = true;
             this.label_output.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_output.Location = new System.Drawing.Point(304, 329);
+            this.label_output.Location = new System.Drawing.Point(303, 293);
             this.label_output.Name = "label_output";
             this.label_output.Size = new System.Drawing.Size(90, 27);
             this.label_output.TabIndex = 7;
@@ -117,22 +122,23 @@ namespace Monitor
             // 
             this.text_output.BackColor = System.Drawing.SystemColors.MenuText;
             this.text_output.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.text_output.Location = new System.Drawing.Point(17, 360);
+            this.text_output.Location = new System.Drawing.Point(17, 324);
             this.text_output.Margin = new System.Windows.Forms.Padding(4);
             this.text_output.Multiline = true;
             this.text_output.Name = "text_output";
             this.text_output.ReadOnly = true;
             this.text_output.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.text_output.Size = new System.Drawing.Size(702, 274);
+            this.text_output.Size = new System.Drawing.Size(669, 274);
             this.text_output.TabIndex = 6;
             this.text_output.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_clear
             // 
             this.btn_clear.BackColor = System.Drawing.SystemColors.Info;
+            this.btn_clear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_clear.FlatAppearance.BorderSize = 0;
             this.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clear.Location = new System.Drawing.Point(559, 113);
+            this.btn_clear.Location = new System.Drawing.Point(526, 113);
             this.btn_clear.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(160, 44);
@@ -141,12 +147,40 @@ namespace Monitor
             this.btn_clear.UseVisualStyleBackColor = false;
             this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
+            // btn_exit
+            // 
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_exit.FlatAppearance.BorderSize = 0;
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_exit.Location = new System.Drawing.Point(607, 274);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(75, 30);
+            this.btn_exit.TabIndex = 9;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
+            // btn_save
+            // 
+            this.btn_save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_save.FlatAppearance.BorderSize = 0;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_save.Location = new System.Drawing.Point(526, 274);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 26);
+            this.btn_save.TabIndex = 10;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
             // textline
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(734, 647);
+            this.ClientSize = new System.Drawing.Size(704, 608);
+            this.Controls.Add(this.btn_save);
+            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.label_output);
             this.Controls.Add(this.text_output);
@@ -175,6 +209,8 @@ namespace Monitor
         private System.Windows.Forms.Label label_output;
         private System.Windows.Forms.TextBox text_output;
         private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_exit;
+        private System.Windows.Forms.Button btn_save;
     }
 }
 
