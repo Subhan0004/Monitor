@@ -18,35 +18,21 @@ namespace Monitor
             InitializeComponent();
         }
 
-       
+
 
         private void button_click_Click(object sender, EventArgs e)
         {
-            
-             string outputWords = text_output.Text;
-            string[] outputWordList = outputWords.Split('\n');
-
-            foreach (string word in outputWordList)
+            string text = tb_line.Text;
+            if (tb_line.Text.Length != 0)
             {
-                if (tb_line.Text != word)
-                {
-                    string text = tb_line.Text;
-                    if (tb_line.Text.Length != 0)
-                    {
-                        text_output.AppendText((text + "\r\n"));
-                    }
-                    else
-                    {
-                        MessageBox.Show("Must Write Something Here!", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    return;
-                }
-                else 
-                {
-                    MessageBox.Show("This information exsits");
-                    return;
-                }
+                text_output.AppendText((text + "\r\n"));
             }
+            else
+            {
+                MessageBox.Show("Must Write Something Here!", "Help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            return;
+
         }
 
         private void button_enable_Click(object sender, EventArgs e)
